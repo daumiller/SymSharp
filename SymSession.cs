@@ -720,7 +720,7 @@ namespace Symitar
         }
 
         string chunk = cmd.GetFileData();
-        if(chunk.Length > 0)
+        if((chunk.Length > 0) || (type == SymFile.Type.REPORT))
         {
           content.Append(chunk);
           if(type==SymFile.Type.REPORT)
